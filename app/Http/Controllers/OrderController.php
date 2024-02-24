@@ -53,12 +53,15 @@ class OrderController extends Controller
 
 
         // dd($orderDtl);
-        return $orderDtl;
+        // echo "<pre>";
+
+        // var_dump($orderDtl);
+        // return $orderDtl;
 
 
 
         // dd($order);
-        return view('admin.orders.view',compact('order'));
+        return view('admin.orders.view',compact('orderDtl'));
     }
 
     /**

@@ -12,6 +12,13 @@
         @foreach ($categories as $category)
             <li><a href="/categorylist/{{ $category->slug }}">{{ $category->name }}</a></li>
         @endforeach
+        @auth
+            <li class=""><a href="/dashboard">Dashboard</a></li>
+            @else
+            <li class=""><a href="/login">Login</a></li>
+            <li class=""><a href="/register">Register</a></li>
+        @endauth
+
       <li class="cart-icon"><a href="/cartlist"><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
   </div>
